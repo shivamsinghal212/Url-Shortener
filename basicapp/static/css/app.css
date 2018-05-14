@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+/*html, body{ height:100%; margin:0; }*/
+body {
+  background: white;
+  color: white;
+  padding-top: 115px;
+}
+.else {
+    min-height: calc(90vh - 60px);
+}
+footer{
+height:60px;
+background:black;
+display: flex;
+justify-content: center; /* align horizontal */
+align-items: center;
+}
+
+* {
+  font-family: Raleway;
+}
+
+.large {
+    font-size: 5.2em;
+}
+.jumbotron{
+  background-color: #3B444B;
+  /*height: 100vh;*/
+}

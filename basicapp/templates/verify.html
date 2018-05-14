@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block bodyblock %}
+
+
+    <form class="form-group" action='{% url 'verify' %}' method="post">{% csrf_token %}
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon2">Ph:</span>
+            <input type="text" class="form-control" name="phone_no" value='{{phone_no}}' aria-describedby="sizing-addon2" readonly="true">
+        </div>     
+        <br>
+        <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1">OTP:</span>
+                    <input type="text" class="form-control" name="get_otp" placeholder="" aria-describedby="sizing-addon1">
+                  </div>
+        <br>
+        <input class="btn btn-success btn-lg" type="submit" value="Verify">
+
+    </form>
+    {% if message %}
+        <h3>{{message}}</h3>
+        <a href='{% url 'auth' %}'>Try Again</a>
+    {% endif %}
+    
+{% endblock bodyblock %}

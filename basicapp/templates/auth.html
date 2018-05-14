@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block bodyblock %}
+    <form class="form-group" action = '{% url 'auth' %}' method="POST">{% csrf_token %}
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">+91</span>
+            <input type="text" name="phone_no" class="form-control" placeholder="Phone Number" aria-describedby="sizing-addon1">
+          </div><br>
+        <input class="btn btn-success btn-lg" type="submit" value="Send OTP">
+    </form>  
+{% endblock bodyblock %}
+
